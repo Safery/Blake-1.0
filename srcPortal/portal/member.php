@@ -84,10 +84,6 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="member.php"> <span>Admin Section</span></a></li>
         <li><a href="client.php"><span>Client Section</span></a></li>
-        <li class="treeview">
-          <a href="#"></i> <span>Kassim gonewild</span>
-          </a>
-        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
