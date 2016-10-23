@@ -149,6 +149,19 @@ textarea {
 
   text-decoration: none;
 }
+.navibar .navbutton2 {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin-left: 30px;
+
+  text-decoration: none;
+}
 .navibar ul li .navbutton:hover {
   background: #a03894;
 }
