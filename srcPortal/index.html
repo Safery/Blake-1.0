@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css">
+<link rel="stylesheet" type="text/css" href="./css/loginpage.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container container-bg-image ">
+<!-- Top header -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+     <div class="container">
+       <div class="navbar-header">
+
+         <a class="navbar-brand" href="#"></a>
+       </div>
+
+
+     </div>
+   </nav>
+  <div class="container ">
+<div class="col-md-12-offset-6">
+  <div class="row text-center">
+<img src="http://www.bbyos.org/images/bbyoshorz.gif" class="logoimage1" alt="logo">
+
+
+</div><!--/.row text-center -->
+
+</div><!--/.col-md-12-offset-6 -->
+<div class="jumbotron login-page">
+ <div class="row">
+<div class="col-md-8">
+ <h4>Please Sign-in:</h4>
+</div>  <!--/.col-md-8-->
+</div><!--/.row-->
+  <div class="row">
+    <div class="input-field col-md-12">
+                 <input id="username" type="email" name="username" class="validate">
+                 <label for="email" data-error="wrong" data-success="right">Email</label>
+            </div>
+</div><!--/.row-->
+<div class="row">
+        <div class="input-field col-md-12">
+          <input id="password" type="password" class="validate" name="password">
+          <label for="password">Password</label>
+            </div>
+      </div><!--/.row-->
+
+<div class="row">
+<div class="row text-center">
+       <div class="col-md-12">
+        <input class="btn btn-primary waves-effect waves-light" id="submit" type="button" value="Submit">
+   </div>
+ </div><!--/.row-text-center-->
+</div><!--/.jumbotron login-page -->
+</div><!--/.container -->
+
+</div><!--/. container container-bg-image -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/js/mdb.min.js"></script>
+
+  <script>
+        function checkResult(type){
+            window.location.replace(type);
+        }
+        $(document).ready(function(){
+            $("#submit").click(function(){
+                var userName = $("#username").val();
+                var password = $("#password").val();
+                var dataString = 'username='+ userName + '&password='+ password;
+                if(userName==''||password==''){
+                    alert("Please Fill All Fields");
+                }
+                else{
+                    // AJAX Code To Submit Form.
+                    $.ajax({
+                        type: "POST",
+                        url: "src/scripts.php",
+                        data: dataString,
+                        cache: false,
+                        success: function(result){
+                            checkResult(result);
+                        }
+                    });
+                }
+                return false;
+            });
+        });
+  </script>
+</body>
+
+</html>
