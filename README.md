@@ -32,3 +32,5 @@ Other Features:
 -easy to find contact information
 -detailed "about us" page
 -automated SEO
+
+**To use database, user must update viewClient.php file with the correct MySQL details. The website can be used without using database, with only static web hosting (no php).**
